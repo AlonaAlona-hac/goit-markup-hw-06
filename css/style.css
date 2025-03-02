@@ -472,7 +472,7 @@ margin: auto;
   justify-content: center;
   flex-direction: row;
   text-align: center;
-  padding-top: 16px;
+  padding-top: 0;
 }
 .button-bsns {
   display: inline-block;
@@ -494,7 +494,7 @@ margin: auto;
 .button-bsns:hover,
 .button-bsns:focus {
   background: #404bbf;
-}/
+}
 
 }
 @media screen and (min-width: 1158px) {
@@ -602,9 +602,15 @@ color: #434455;
 .section {
   padding-top: 96px;
   padding-bottom: 96px;
-  max-width: 736px;
+  max-width: 768px;
+}.container{
+  width: 736px;
+  margin: 0 auto;
+  padding: 0;
 }
-.features{
+.features {
+  max-width: 736px;
+  margin-left: 16px;
  margin: 0 auto;
    }
 .features-list {
@@ -615,7 +621,7 @@ gap: 24px;
 row-gap: 72px;
 }
 .features-list-item {
-  width: calc((100% - 48px) / 2);
+  width: calc((100% - 24px) / 2);
 }
 .svg-icons {
 display: none;
@@ -811,8 +817,6 @@ margin-bottom: 8px;
   padding-bottom: 96px;
   max-width: 768px;
 }
-
-
     .team{
     margin: 0 auto;
     background: #f4f4fd;
@@ -835,7 +839,7 @@ gap: 24px;
 row-gap: 72px;
 padding-left: 108px;
 padding-right: 108px;
-padding-bottom: 96px;
+padding-bottom: 0;
 }
 .team-svg-href {
   background-color: #4d5ae5;
@@ -868,16 +872,17 @@ padding-bottom: 96px;
 .container-team {
   text-align: center;
   padding-bottom: 32px;
-  padding-top: 32px;
+
 
 }
 .team-list-item {
   background: #fff;
 }
 .team-container {
-  padding-bottom: 32px;
-  padding-top: 32px;
+  padding-bottom: 0;
   text-align: center;
+  margin: 0;
+  width: 100%;
 }
 .title-t-three {
  font-weight: 500;
@@ -906,13 +911,13 @@ padding-bottom: 96px;
   max-width: 1440px;
 }
 
- .team {
-    margin: auto;
- 
-   }
+
     .container {
+      padding-left: 0;
+      padding-right: 0;
     width: 1158px;
-margin: auto;}
+margin: auto;
+}
     .team{
     margin: 0 auto;background: #f4f4fd;
 }.team-svg-list {
@@ -929,6 +934,7 @@ margin: auto;}
   gap: 24px;
   padding-left: 0;
   padding-right: 0;
+  padding-bottom: 0;
 }
 .team-svg-href {
   background-color: #4d5ae5;
@@ -943,6 +949,10 @@ margin: auto;}
 .team-svg-href:hover,
 .team-svg-href:focus {
   background-color: #404bbf;
+}
+.team-image{
+  width: 100%;
+  height: 100%;
 }
 .icon-svg {
   fill: #f4f4fd;
@@ -960,14 +970,14 @@ margin: auto;}
 .container-team {
   text-align: center;
   padding-bottom: 32px;
-  padding-top: 32px;
+  
 }
 .team-list-item {
   background: #fff;
 }
 .team-container {
-  padding-bottom: 32px;
-  padding-top: 32px;
+  padding-bottom: 0;
+  padding-top: 0;
   text-align: center;
 }
 .title-t-three {
@@ -1196,12 +1206,17 @@ width: calc( (100% - 48px) / 3 );
 }
 
 /*footer*/
+ .section {
+ margin: 0 auto;
+  max-width: 320px;
+}
+
 .footer{
 
   margin: auto;
 }
 .container .footer-container{
-    width: 320px;
+    width: 288px;
     margin: auto;
     padding: 0;;
 }
@@ -1250,6 +1265,7 @@ width: calc( (100% - 48px) / 3 );
 flex-direction: row;
 flex-wrap: wrap;
 justify-content: center;
+width: 288px;
 }
 .fotter-social-links {
   max-width: 208px;
@@ -1342,8 +1358,8 @@ justify-content: center;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  width: 408px;
-  min-height: 584px;
+  width: 288px;
+  min-height: 623px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1632,18 +1648,6 @@ input:checked + label > span {
     margin: 0 auto;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (min-width: 768px){
     .section {
   padding-top: 96px;
@@ -1699,7 +1703,8 @@ input:checked + label > span {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
- justify-content: left;
+   justify-content: left;
+   width:768px;
 }
 .fotter-social-links {
   max-width: 208px;
@@ -2100,6 +2105,7 @@ margin: auto;}
 .container-footer {
   margin-right: 120px;
   margin-left: 0;
+  margin-bottom: 0;
 }
 .footer-logo {
   font-family: "Raleway", sans-serif;
@@ -2131,9 +2137,11 @@ margin: auto;}
 .footer-content {
   display: flex;
   align-items: baseline;
+  width: 1128px;
 }
 .fotter-social-links {
   max-width: 208px;
+  margin-bottom: 0;
 }
 .footer-social-text {
   font-weight: 500;
