@@ -812,9 +812,7 @@ margin-bottom: 8px;
   max-width: 768px;
 }
 
- .team{
-    margin: auto;
-}
+
     .team{
     margin: 0 auto;
     background: #f4f4fd;
@@ -1251,6 +1249,7 @@ width: calc( (100% - 48px) / 3 );
   display: flex;
 flex-direction: row;
 flex-wrap: wrap;
+justify-content: center;
 }
 .fotter-social-links {
   max-width: 208px;
@@ -1265,7 +1264,7 @@ flex-wrap: wrap;
   color: #fff;
   margin-bottom: 16px;
   max-width: 96px;
- 
+ margin: 0 auto 16px;
 }
 .team-svg-footer {
   background-color: #4d5ae5;
@@ -1700,7 +1699,7 @@ input:checked + label > span {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
-   
+ justify-content: left;
 }
 .fotter-social-links {
   max-width: 208px;
@@ -1714,6 +1713,7 @@ input:checked + label > span {
   color: #fff;
   margin-bottom: 16px;
   max-width: 96px;
+  margin: 0 0 16px;
 }
 .team-svg-footer {
   background-color: #4d5ae5;
