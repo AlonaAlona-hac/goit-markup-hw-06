@@ -47,19 +47,19 @@ button {
 
 /* Container */
 .container {
-  width: 320px;
+  max-width: 320px;
   padding-left: 16px;
   padding-right: 16px;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1158px) {
   .container {
-    width: 1158px;
+    max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
@@ -104,9 +104,6 @@ button {
   fill: #2f2f37;
 }
 @media screen and (min-width: 768px) {
-  .container .header-container {
-    width: 768px;
-  }
   .burger-icon {
     display: none;
   }
@@ -194,10 +191,8 @@ button {
 @media screen and (min-width: 1158px) {
   .header {
     margin: auto;
-    width: 1440px;
   }
   .container {
-    width: 1158px;
     margin: auto;
   }
 
@@ -411,7 +406,7 @@ button {
   text-align: center;
 }
 .button-bsns {
-  display: inline-block;
+  display: block;
   border: none;
   font-weight: 500;
   font-size: 16px;
@@ -423,7 +418,6 @@ button {
   height: 56px;
   min-width: 169px;
   margin: 0 auto;
-  padding: 16px 32px;
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -493,16 +487,13 @@ button {
 .section {
   padding-top: 96px;
   padding-bottom: 96px;
-  max-width: 320px;
 }
 .features {
   margin: 0 auto;
 }
 .features-list {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 72px;
 }
 .svg-icons {
@@ -532,15 +523,12 @@ button {
   .section {
     padding-top: 96px;
     padding-bottom: 96px;
-    max-width: 768px;
   }
   .container {
-    width: 736px;
     margin: 0 auto;
     padding: 0;
   }
   .features {
-    max-width: 736px;
     margin-left: 16px;
     margin: 0 auto;
   }
@@ -550,6 +538,8 @@ button {
     flex-wrap: wrap;
     gap: 24px;
     row-gap: 72px;
+    max-width: 736px;
+    margin: auto;
   }
   .features-list-item {
     width: calc((100% - 24px) / 2);
@@ -567,7 +557,6 @@ button {
 }
 @media screen and (min-width: 1158px) {
   .features {
-    max-width: 1158px;
     margin: 0 auto;
   }
   .section {
@@ -599,6 +588,7 @@ button {
     display: flex;
     flex-direction: row;
     gap: 24px;
+    max-width: 1158px;
   }
   .svg-icons {
     border: 1px solid #8e8f99;
@@ -639,11 +629,7 @@ button {
   background: #f4f4fd;
   margin: auto;
 }
-.container .team-container {
-  width: 320px;
-  margin: auto;
-  padding: 0;
-}
+
 .section .team-container {
   text-align: center;
   gap: 74px;
@@ -681,7 +667,6 @@ button {
   text-align: center;
   padding-bottom: 32px;
   margin-top: 32px;
-  width: 232px;
   gap: 8px;
 }
 .team-svg-list {
@@ -731,7 +716,6 @@ button {
   .section {
     padding-top: 96px;
     padding-bottom: 96px;
-    max-width: 768px;
   }
   .team {
     margin: 0 auto;
@@ -757,21 +741,17 @@ button {
   .team-container {
     padding-bottom: 0;
     text-align: center;
-    margin: 0;
-    width: 100%;
   }
 }
 @media screen and (min-width: 1158px) {
   .section {
     padding-top: 120px;
     padding-bottom: 120px;
-    max-width: 1440px;
   }
 
   .container {
     padding-left: 0;
     padding-right: 0;
-    width: 1158px;
     margin: auto;
   }
   .team-list {
@@ -807,15 +787,13 @@ button {
 /*portfolio*/
 .section {
   margin: 0 auto;
-  max-width: 320px;
 }
 .overlay {
   display: none;
 }
-.container .portfolio-container {
-  width: 288px;
+.container {
   margin: auto;
-  padding: 0;
+  padding: 0 16px;
 }
 .portfolio-list {
   display: flex;
@@ -837,8 +815,10 @@ button {
   margin-bottom: 8px;
 }
 .portfolio-list-item {
+  width: calc ((100% - 48px) / 3);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+
   max-width: 288px;
 }
 
@@ -854,10 +834,8 @@ button {
   .section {
     padding-top: 96px;
     padding-bottom: 96px;
-    max-width: 768px;
   }
   .container .portfolio-container {
-    width: 736px;
     margin: auto;
   }
   .portfolio {
@@ -874,6 +852,7 @@ button {
     width: calc((100% - 24px) / 2);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
       0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+
     max-width: 356px;
   }
 }
@@ -881,14 +860,15 @@ button {
   .section {
     padding-top: 120px;
     padding-bottom: 120px;
-    max-width: 1440px;
   }
-
+  .portfolio-list-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
   .portfolio {
     margin: auto;
   }
   .container {
-    width: 1158px;
     margin: auto;
   }
 
@@ -899,13 +879,10 @@ button {
     row-gap: 48px;
   }
   .portfolio-list-item {
-    width: calc((100% - 48px) / 3);
     box-shadow: none;
+    width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     max-width: 360px;
-  }
-  .portfolio-list-item:hover {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   }
   .overlay {
     display: block;
@@ -943,13 +920,11 @@ button {
 /*footer*/
 .section {
   margin: 0 auto;
-  max-width: 320px;
 }
 .footer {
   margin: auto;
 }
 .container .footer-container {
-  width: 288px;
   margin: auto;
   padding: 0;
 }
@@ -961,7 +936,6 @@ button {
 .container-footer {
   margin: 0;
   margin-bottom: 72px;
-  max-width: 288px;
 }
 .footer-logo {
   display: flex;
@@ -996,9 +970,6 @@ button {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  width: 288px;
-  padding-left: 0;
-  padding-right: 0;
 }
 .fotter-social-links {
   max-width: 208px;
@@ -1071,7 +1042,7 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 72px 16px 24px 16px;
+  padding: 72px 24px 24px 24px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate(-50%, -50%);
 }
@@ -1201,15 +1172,13 @@ button {
   width: 0;
   height: 0;
 }
-input:checked + label > .custom-checkbox-span {
+input:checked + label > span {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
 }
 
 .checkbox-label {
-  display: flex;
-  align-items: center;
   font-size: 14px;
   font-weight: 400;
   font-size: 12px;
@@ -1231,7 +1200,6 @@ input:checked + label > .custom-checkbox-span {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-right: 8px;
-  flex-shrink: 0;
 }
 .comment-area {
   margin-bottom: 0;
@@ -1275,17 +1243,19 @@ input:checked + label > .custom-checkbox-span {
 .email-form {
   border: 1px solid #fff;
   border-radius: 4px;
-  width: 264px;
+  min-width: 288px;
   height: 40px;
+  opacity: 0.6;
+  outline: transparent;
+  background-color: transparent;
   padding-left: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-weight: 400;
+  font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
-  background-color: transparent;
-  font-size: 12px;
-  outline: transparent;
-  font-weight: 400;
   color: #fff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .email-form::placeholder {
   color: #fff;
@@ -1345,7 +1315,6 @@ input:checked + label > .custom-checkbox-span {
   .section {
     padding-top: 96px;
     padding-bottom: 96px;
-    max-width: 768px;
   }
   .footer {
     margin: auto;
@@ -1361,6 +1330,9 @@ input:checked + label > .custom-checkbox-span {
     margin-bottom: 72px;
     margin-right: 0;
   }
+  .email-form {
+    min-width: 264px;
+  }
   .footer-logo {
     display: inline-block;
   }
@@ -1368,9 +1340,8 @@ input:checked + label > .custom-checkbox-span {
     max-width: 264px;
   }
   .footer-content {
-    gap: 24px;
+    column-gap: 24px;
     justify-content: left;
-    width: 768px;
   }
   .fotter-social-links {
     max-width: 208px;
@@ -1394,7 +1365,6 @@ input:checked + label > .custom-checkbox-span {
   .modal {
     width: 408px;
     min-height: 584px;
-    padding: 72px 24px 24px 24px;
   }
   .form-submit-btn {
     cursor: pointer;
@@ -1406,18 +1376,20 @@ input:checked + label > .custom-checkbox-span {
     margin-bottom: 8px;
   }
 }
+
 @media screen and (min-width: 1158px) {
   .section {
     padding-top: 120px;
     padding-bottom: 120px;
-    max-width: 1440px;
   }
   .footer {
     margin: auto;
   }
   .container {
-    width: 1158px;
     margin: auto;
+  }
+  .email-form {
+    min-width: 264px;
   }
   .footer {
     background: #2e2f42;
@@ -1438,21 +1410,21 @@ input:checked + label > .custom-checkbox-span {
   .footer-content {
     display: flex;
     align-items: baseline;
-    width: 1128px;
+    gap: 0;
   }
   .fotter-social-links {
     max-width: 208px;
     margin-bottom: 0;
+    margin-right: 80px;
   }
   .modal {
     width: 408px;
     min-height: 584px;
-    padding: 72px 24px 24px 24px;
   }
   .subscribe-container {
     width: 453px;
     height: 80px;
-    margin-left: auto;
+    margin: 0;
   }
   .subscribe-form {
     display: flex;
