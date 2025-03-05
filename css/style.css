@@ -435,7 +435,7 @@ button {
       image-set(url(../images/bsn-tab.png) 1x, url(../images/bsn-tab@2x.png) 2x);
 
     padding-top: 112px;
-    padding-bottom: 122px;
+    padding-bottom: 112px;
   }
   .business-h-one {
     font-size: 56px;
